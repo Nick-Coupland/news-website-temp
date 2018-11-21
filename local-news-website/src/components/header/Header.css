@@ -1,0 +1,35 @@
+.header {
+    overflow: hidden;
+    background-color: #2D848A;
+    padding: 12px;
+    position: relative;
+    top: 0;
+    left:0;
+    width: 100%;
+}
+
+.header .logoSection {
+    cursor: pointer;    
+}
+
+.header a {
+    float: left;
+    color: white;
+    padding: 12px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header img {
+    float: left;
+    height: 50px;
+}
+
+.header a:hover {
+    opacity: 0.8;
+}
+
+.headerRight {
+    float: right;
+}
