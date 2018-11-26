@@ -11,7 +11,8 @@ class Header extends Component {
                 </div>
 
                 <div className="headerRight">
-                    <p>Log in buttons will go here.</p>
+                    <a href="#default" onClick={this.props.onLoginClick}>Log in</a>
+                    <a href="#default" onClick={this.props.onSignupClick}>Sign up</a>
                 </div>
             </div>
         );

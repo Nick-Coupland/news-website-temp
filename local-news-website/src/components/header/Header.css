@@ -1,6 +1,6 @@
 .header {
     overflow: hidden;
-    background-color: #2D848A;
+    background-color: #187795;
     padding: 12px;
     position: relative;
     top: 0;
@@ -12,7 +12,7 @@
     cursor: pointer;    
 }
 
-.header a {
+.header .logoSection a {
     float: left;
     color: white;
     padding: 12px;
@@ -32,4 +32,10 @@
 
 .headerRight {
     float: right;
+    padding: 12px;
+}
+
+.headerRight a {
+    color: #BED8D4;
+    text-decoration: none;
 }
