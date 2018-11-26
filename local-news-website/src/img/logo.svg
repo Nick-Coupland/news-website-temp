@@ -1,204 +1,133 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="550px" height="400px" viewBox="0 0 550 400">
-<defs>
-<g id="Layer0_0_MEMBER_0_FILL">
-<path fill="#000000" stroke="none" d="
-M 105.35 135.5
-L 100.3 135.5 100.3 180.65 105.35 180.65 105.35 135.5 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_1_FILL">
-<path fill="#000000" stroke="none" d="
-M 115.4 135.5
-L 110.3 135.5 110.3 180.65 115.4 180.65 115.4 135.5 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_2_FILL">
-<path fill="#000000" stroke="none" d="
-M 120.35 135.5
-L 120.35 180.65 125.45 180.65 125.45 135.5 120.35 135.5 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_3_FILL">
-<path fill="#000000" stroke="none" d="
-M 135.45 135.5
-L 130.4 135.5 130.4 180.65 135.45 180.65 135.45 135.5 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_4_FILL">
-<path fill="#000000" stroke="none" d="
-M 145.5 135.5
-L 140.4 135.5 140.4 180.65 145.5 180.65 145.5 135.5 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_5_FILL">
-<path fill="#000000" stroke="none" d="
-M 194.95 180.7
-L 194.95 175.6 149.8 175.6 149.8 180.7 194.95 180.7 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_6_FILL">
-<path fill="#000000" stroke="none" d="
-M 194.95 170.65
-L 194.95 165.55 149.8 165.55 149.8 170.65 194.95 170.65 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_7_FILL">
-<path fill="#000000" stroke="none" d="
-M 194.95 160.6
-L 194.95 155.55 149.8 155.55 149.8 160.6 194.95 160.6 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_8_FILL">
-<path fill="#000000" stroke="none" d="
-M 194.95 150.6
-L 194.95 145.5 149.8 145.5 149.8 150.6 194.95 150.6 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_9_FILL">
-<path fill="#000000" stroke="none" d="
-M 194.95 140.55
-L 194.95 135.45 149.8 135.45 149.8 140.55 194.95 140.55 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_10_FILL">
-<path fill="#000000" stroke="none" d="
-M 194.95 180.7
-L 189.85 180.7 189.85 225.85 194.95 225.85 194.95 180.7 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_11_FILL">
-<path fill="#000000" stroke="none" d="
-M 184.9 180.7
-L 179.8 180.7 179.8 225.85 184.9 225.85 184.9 180.7 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_12_FILL">
-<path fill="#000000" stroke="none" d="
-M 174.85 180.7
-L 169.8 180.7 169.8 225.85 174.85 225.85 174.85 180.7 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_13_FILL">
-<path fill="#000000" stroke="none" d="
-M 164.85 225.85
-L 164.85 180.7 159.75 180.7 159.75 225.85 164.85 225.85 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_14_FILL">
-<path fill="#000000" stroke="none" d="
-M 154.8 180.7
-L 149.7 180.7 149.7 225.85 154.8 225.85 154.8 180.7 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_15_FILL">
-<path fill="#000000" stroke="none" d="
-M 145.45 225.9
-L 145.45 220.8 100.3 220.8 100.3 225.9 145.45 225.9 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_16_FILL">
-<path fill="#000000" stroke="none" d="
-M 145.45 215.85
-L 145.45 210.8 100.3 210.8 100.3 215.85 145.45 215.85 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_17_FILL">
-<path fill="#000000" stroke="none" d="
-M 145.45 205.85
-L 145.45 200.75 100.3 200.75 100.3 205.85 145.45 205.85 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_18_FILL">
-<path fill="#000000" stroke="none" d="
-M 100.3 190.7
-L 100.3 195.8 145.45 195.8 145.45 190.7 100.3 190.7 Z"/>
-</g>
-
-<g id="Layer0_0_MEMBER_19_FILL">
-<path fill="#000000" stroke="none" d="
-M 100.3 180.7
-L 100.3 185.75 145.45 185.75 145.45 180.7 100.3 180.7 Z"/>
-</g>
-</defs>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_0_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_1_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_2_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_3_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_4_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_5_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_6_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_7_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_8_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_9_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_10_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_11_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_12_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_13_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_14_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_15_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_16_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_17_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_18_FILL"/>
-</g>
-
-<g transform="matrix( 1, 0, 0, 1, 128,27) ">
-<use xlink:href="#Layer0_0_MEMBER_19_FILL"/>
-</g>
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+ <defs>
+  <g id="Layer0_0_MEMBER_0_FILL">
+   <path id="svg_1" d="m105.35,135.5l-5.05,0l0,45.15l5.05,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_1_FILL">
+   <path id="svg_2" d="m115.4,135.5l-5.1,0l0,45.15l5.1,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_2_FILL">
+   <path id="svg_3" d="m120.35,135.5l0,45.15l5.1,0l0,-45.15l-5.1,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_3_FILL">
+   <path id="svg_4" d="m135.45,135.5l-5.05,0l0,45.15l5.05,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_4_FILL">
+   <path id="svg_5" d="m145.5,135.5l-5.1,0l0,45.15l5.1,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_5_FILL">
+   <path id="svg_6" d="m194.95,180.7l0,-5.1l-45.15,0l0,5.1l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_6_FILL">
+   <path id="svg_7" d="m194.95,170.65l0,-5.1l-45.15,0l0,5.1l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_7_FILL">
+   <path id="svg_8" d="m194.95,160.6l0,-5.05l-45.15,0l0,5.05l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_8_FILL">
+   <path id="svg_9" d="m194.95,150.6l0,-5.1l-45.15,0l0,5.1l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_9_FILL">
+   <path id="svg_10" d="m194.95,140.55l0,-5.1l-45.15,0l0,5.1l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_10_FILL">
+   <path id="svg_11" d="m194.95,180.7l-5.1,0l0,45.15l5.1,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_11_FILL">
+   <path id="svg_12" d="m184.9,180.7l-5.1,0l0,45.15l5.1,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_12_FILL">
+   <path id="svg_13" d="m174.85,180.7l-5.05,0l0,45.15l5.05,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_13_FILL">
+   <path id="svg_14" d="m164.85,225.85l0,-45.15l-5.1,0l0,45.15l5.1,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_14_FILL">
+   <path id="svg_15" d="m154.8,180.7l-5.1,0l0,45.15l5.1,0l0,-45.15z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_15_FILL">
+   <path id="svg_16" d="m145.45,225.9l0,-5.1l-45.15,0l0,5.1l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_16_FILL">
+   <path id="svg_17" d="m145.45,215.85l0,-5.05l-45.15,0l0,5.05l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_17_FILL">
+   <path id="svg_18" d="m145.45,205.85l0,-5.1l-45.15,0l0,5.1l45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_18_FILL">
+   <path id="svg_19" d="m100.3,190.7l0,5.1l45.15,0l0,-5.1l-45.15,0z" fill="#BED8D4"/>
+  </g>
+  <g id="Layer0_0_MEMBER_19_FILL">
+   <path id="svg_20" d="m100.3,180.7l0,5.05l45.15,0l0,-5.05l-45.15,0z" fill="#BED8D4"/>
+  </g>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="152" width="152" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_61">
+   <g id="svg_21">
+    <use y="-105.674995" x="-72.625" id="svg_22" xlink:href="#Layer0_0_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_23">
+    <use y="-105.674995" x="-72.625" id="svg_24" xlink:href="#Layer0_0_MEMBER_1_FILL"/>
+   </g>
+   <g id="svg_25">
+    <use y="-105.674995" x="-72.625" id="svg_26" xlink:href="#Layer0_0_MEMBER_2_FILL"/>
+   </g>
+   <g id="svg_27">
+    <use y="-105.674995" x="-72.625" id="svg_28" xlink:href="#Layer0_0_MEMBER_3_FILL"/>
+   </g>
+   <g id="svg_29">
+    <use y="-105.674995" x="-72.625" id="svg_30" xlink:href="#Layer0_0_MEMBER_4_FILL"/>
+   </g>
+   <g id="svg_31">
+    <use y="-105.674995" x="-72.625" id="svg_32" xlink:href="#Layer0_0_MEMBER_5_FILL"/>
+   </g>
+   <g id="svg_33">
+    <use y="-105.674995" x="-72.625" id="svg_34" xlink:href="#Layer0_0_MEMBER_6_FILL"/>
+   </g>
+   <g id="svg_35">
+    <use y="-105.674995" x="-72.625" id="svg_36" xlink:href="#Layer0_0_MEMBER_7_FILL"/>
+   </g>
+   <g id="svg_37">
+    <use y="-105.674995" x="-72.625" id="svg_38" xlink:href="#Layer0_0_MEMBER_8_FILL"/>
+   </g>
+   <g id="svg_39">
+    <use y="-105.674995" x="-72.625" id="svg_40" xlink:href="#Layer0_0_MEMBER_9_FILL"/>
+   </g>
+   <g id="svg_41">
+    <use y="-105.674995" x="-72.625" id="svg_42" xlink:href="#Layer0_0_MEMBER_10_FILL"/>
+   </g>
+   <g id="svg_43">
+    <use y="-105.674995" x="-72.625" id="svg_44" xlink:href="#Layer0_0_MEMBER_11_FILL"/>
+   </g>
+   <g id="svg_45">
+    <use y="-105.674995" x="-72.625" id="svg_46" xlink:href="#Layer0_0_MEMBER_12_FILL"/>
+   </g>
+   <g id="svg_47">
+    <use y="-105.674995" x="-72.625" id="svg_48" xlink:href="#Layer0_0_MEMBER_13_FILL"/>
+   </g>
+   <g id="svg_49">
+    <use y="-105.674995" x="-72.625" id="svg_50" xlink:href="#Layer0_0_MEMBER_14_FILL"/>
+   </g>
+   <g id="svg_51">
+    <use y="-105.674995" x="-72.625" id="svg_52" xlink:href="#Layer0_0_MEMBER_15_FILL"/>
+   </g>
+   <g id="svg_53">
+    <use y="-105.674995" x="-72.625" id="svg_54" xlink:href="#Layer0_0_MEMBER_16_FILL"/>
+   </g>
+   <g id="svg_55">
+    <use y="-105.674995" x="-72.625" id="svg_56" xlink:href="#Layer0_0_MEMBER_17_FILL"/>
+   </g>
+   <g id="svg_57">
+    <use y="-105.674995" x="-72.625" id="svg_58" xlink:href="#Layer0_0_MEMBER_18_FILL"/>
+   </g>
+   <g id="svg_59">
+    <use y="-105.674995" x="-72.625" id="svg_60" xlink:href="#Layer0_0_MEMBER_19_FILL"/>
+   </g>
+  </g>
+ </g>
 </svg>
