@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
-// import Signup from './components/signup/Signup';
+import Signup from './components/signup/Signup';
 
 import logo from './img/logo.svg';
 
@@ -17,6 +17,7 @@ class App extends Component {
     };
     this.showLogin = this.showLogin.bind(this);
     this.showSignup = this.showSignup.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
   }
 
   showLogin() {
@@ -25,6 +26,11 @@ class App extends Component {
 
   showSignup() {
     this.setState({currentView: "signup"});
+  }
+
+  handleSignup(data) {
+    console.log(data);
+    this.setState({currentView: "home"});
   }
 
   render() {
@@ -36,7 +42,7 @@ class App extends Component {
       currentView = <Login/>
     }
     else if(this.state.currentView === "signup") {
-      // currentView = <Signup/>
+      currentView = <Signup onSubmit={this.handleSignup}/>
     }
     return (
       <div>
