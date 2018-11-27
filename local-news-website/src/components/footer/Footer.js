@@ -19,7 +19,6 @@ class Footer extends Component {
                     <h2>Quick Links</h2>
                     <ul>
                         <li><a href="#default">Home</a></li>
-                        <li><a href="#default">Profile?</a></li>
                         <li><a href="#default">Top</a></li>
                     </ul>
                 </div>
