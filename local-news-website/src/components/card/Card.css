@@ -1,0 +1,35 @@
+.card {
+    background-color: #187795;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    color: white;
+    height: 100%;
+    max-width: 1250px;
+    margin: 12px auto;
+}
+
+.card img {
+    /* temp value */
+    /* height: 400px; */
+    width: 100%;
+    float: left;
+    /* object-fit: cover; */
+}
+
+.testClass {
+    width: 50%;
+    float: left;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card .textContainer {
+    padding: 2px 16px;
+    width: 50%;
+    float: right;
+    /* float: left; */
+    /* position: absolute; */
+    /* display: inline; */
+}
