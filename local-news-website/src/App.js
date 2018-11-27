@@ -6,6 +6,8 @@ import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 
+import CallAPI from './CallAPI';
+
 import logo from './img/logo.svg';
 
 
@@ -36,6 +38,14 @@ class App extends Component {
   handleSignup(data) {
     console.log(data);
     this.setState({currentView: "home"});
+  }
+
+  updateArticleData(data) {
+    console.log(data);
+  }
+
+  componentDidMount() {
+    new CallAPI().getArticles(this.updateArticleData);
   }
 
   render() {
