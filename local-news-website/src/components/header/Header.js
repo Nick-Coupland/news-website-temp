@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <div className="logoSection">
+                <div className="logoSection" onClick={this.props.onLogoClick}>
                     <img src={this.props.logo} alt="Main logo"/>
                     <a href="#default" className="logo">Nick's News</a>
                 </div>

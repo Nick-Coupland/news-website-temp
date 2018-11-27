@@ -15,9 +15,14 @@ class App extends Component {
     this.state = {
       currentView: "home"
     };
+    this.showHome = this.showHome.bind(this);
     this.showLogin = this.showLogin.bind(this);
     this.showSignup = this.showSignup.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
+  }
+
+  showHome() {
+    this.setState({currentView: "home"});
   }
 
   showLogin() {
@@ -46,7 +51,7 @@ class App extends Component {
     }
     return (
       <div>
-        <Header logo={logo} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
+        <Header logo={logo} onLogoClick={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
         {currentView}
         <Footer/>
       </div>
