@@ -18,11 +18,14 @@ class Card extends Component {
     render() {
         return (
             <div className="card" onClick={this.handleClick}>
-                <img src={this.props.image} alt={this.props.imgAlt}/>
+                <div className="testClass">
+                    <img src={this.props.photo} alt={this.props.imgAlt}/>
+                </div>
                 <div className="textContainer">
                     <h4><b>{this.props.title}</b></h4>
-                    <p>{this.props.description}</p>
+                    <p>{this.props.body}</p>
                 </div>
+                <div className="clear"></div>
             </div>
         );
     }

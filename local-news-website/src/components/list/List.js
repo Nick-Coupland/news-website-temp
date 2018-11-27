@@ -4,12 +4,11 @@ import Card from '../card/Card';
 class Grid extends Component {
     createCard(data) {
         return (
-            // Possibly redundant div
-            <div>
-                <Card   id={data.id}
-                        title={data.title}
-                />
-            </div>
+            <Card   id={data.id}
+                    title={data.title}
+                    body={data.body}
+                    photo={data.photo}
+            />
         )}
 
     render() {
@@ -19,13 +18,15 @@ class Grid extends Component {
 
         var listItems = [];
         var len = this.props.items.length;
-        var x;
-        for(x in this.props.items) {
-            this.createCard(x);
+        for(let i = 0; i < len; i++) {
+            console.log(this.props.items[i]);
+            listItems.push(this.createCard(this.props.items[i]));
         }
 
         return (
-            {listItems}
+            <div>
+                {listItems}
+            </div>
         )
     }
 }
