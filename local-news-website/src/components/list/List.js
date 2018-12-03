@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Card from '../card/Card';
 
-class Grid extends Component {
+class List extends Component {
     createCard(data) {
         return (
-            <Card   id={data.id}
+            <Card   key={data.id}
+                    id={data.id}
                     title={data.title}
                     body={data.body}
                     photo={data.photo}
+                    onClick={this.props.onClick}
             />
         )}
 
@@ -19,7 +21,6 @@ class Grid extends Component {
         var listItems = [];
         var len = this.props.items.length;
         for(let i = 0; i < len; i++) {
-            console.log(this.props.items[i]);
             listItems.push(this.createCard(this.props.items[i]));
         }
 
@@ -31,4 +32,4 @@ class Grid extends Component {
     }
 }
 
-export default Grid;
+export default List;
