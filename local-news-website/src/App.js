@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import List from './components/list/List';
+import Article from './components/article/Article';
 
 import CallAPI from './CallAPI';
 
@@ -17,12 +18,14 @@ class App extends Component {
     super(props);
     this.state = {
       currentView: "home",
-      homeItems: []
+      homeItems: [],
+      currentArticle: null
     };
     this.showHome = this.showHome.bind(this);
     this.showLogin = this.showLogin.bind(this);
     this.showSignup = this.showSignup.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
+    this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
     this.updateArticleData = this.updateArticleData.bind(this);
   }
 
@@ -41,6 +44,14 @@ class App extends Component {
   handleSignup(data) {
     console.log(data);
     this.setState({currentView: "home"});
+  }
+
+  handleThumbnailClick(key) {
+    let articleData = this.state.homeItems.filter(article => article.id === key);
+    this.setState({
+      currentView: "article",
+      currentArticle: articleData
+    });
   }
 
   updateArticleData(data) {
@@ -65,7 +76,10 @@ class App extends Component {
   render() {
     let currentView;
     if(this.state.currentView === "home") {
-      currentView = <List items={this.state.homeItems}/>
+      currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
+    }
+    else if(this.state.currentView === "article") {
+      currentView = <Article articleData={this.state.currentArticle}/>
     }
     else if(this.state.currentView === "login") {
       currentView = <Login/>

@@ -8,10 +8,8 @@ class Card extends Component {
     this.handleClick = this.handleClick.bind(this);
 }
 
-    handleClick(event) {
-        event.preventDefault();
-        // this.props.onClick(this.props.id);
-        console.log("card clicked");
+    handleClick() {
+        this.props.onClick(this.props.id);
     }
 
 
