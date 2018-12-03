@@ -23,6 +23,7 @@ class App extends Component {
     };
     this.showHome = this.showHome.bind(this);
     this.showLogin = this.showLogin.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
     this.showSignup = this.showSignup.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
     this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
@@ -37,12 +38,24 @@ class App extends Component {
     this.setState({currentView: "login"});
   }
 
+  handleLogin(data) {
+    new CallAPI().loginUser(data);
+    // Add callback and negative response
+    this.setState({currentView: "home"});
+  }
+
   showSignup() {
     this.setState({currentView: "signup"});
   }
 
   handleSignup(data) {
-    console.log(data);
+    new CallAPI().addUser(data, (err, result) => {
+      if(err) {
+        console.log(err);
+        return;
+      }
+      console.log(result);
+    });
     this.setState({currentView: "home"});
   }
 
@@ -82,14 +95,14 @@ class App extends Component {
       currentView = <Article articleData={this.state.currentArticle}/>
     }
     else if(this.state.currentView === "login") {
-      currentView = <Login/>
+      currentView = <Login onSubmit={this.handleLogin}/>
     }
     else if(this.state.currentView === "signup") {
       currentView = <Signup onSubmit={this.handleSignup}/>
     }
     return (
       <div>
-        <Header logo={logo} onLogoClick={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
+        <Header logo={logo} showHome={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
         {currentView}
         <Footer/>
       </div>
