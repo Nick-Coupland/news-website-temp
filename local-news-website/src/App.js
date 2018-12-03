@@ -102,7 +102,7 @@ class App extends Component {
     }
     return (
       <div>
-        <Header logo={logo} onLogoClick={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
+        <Header logo={logo} showHome={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
         {currentView}
         <Footer/>
       </div>

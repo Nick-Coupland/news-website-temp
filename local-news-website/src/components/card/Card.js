@@ -15,12 +15,12 @@ class Card extends Component {
 
     render() {
         return (
-            <div className="card" onClick={this.handleClick}>
+            <div className="card col-m-8" onClick={this.handleClick}>
                 <div className="testClass">
                     <img src={this.props.photo} alt={this.props.imgAlt}/>
                 </div>
                 <div className="textContainer">
-                    <h4><b>{this.props.title}</b></h4>
+                    <h3><b>{this.props.title}</b></h3>
                     <p>{this.props.body}</p>
                 </div>
                 <div className="clear"></div>

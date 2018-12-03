@@ -3,6 +3,7 @@ const url = "http://localhost:8080"
 
 
 class CallAPI {
+    // --------------------Articles--------------------
     getArticles(callback) {
         axios.get(url + '/article')
         .then(function(response) {
@@ -14,6 +15,8 @@ class CallAPI {
     }
 
 
+
+    // --------------------Users--------------------
     addUser(data, callback) {
         axios.post(url + '/user', {
             username: data.username,
