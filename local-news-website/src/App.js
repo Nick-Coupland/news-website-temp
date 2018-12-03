@@ -42,7 +42,13 @@ class App extends Component {
   }
 
   handleSignup(data) {
-    console.log(data);
+    new CallAPI().addUser(data, (err, result) => {
+      if(err) {
+        console.log(err);
+        return;
+      }
+      console.log(result);
+    });
     this.setState({currentView: "home"});
   }
 
