@@ -4,7 +4,8 @@ import Card from '../card/Card';
 class List extends Component {
     createCard(data) {
         return (
-            <Card   id={data.id}
+            <Card   key={data.id}
+                    id={data.id}
                     title={data.title}
                     body={data.body}
                     photo={data.photo}

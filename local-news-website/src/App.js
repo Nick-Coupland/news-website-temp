@@ -46,8 +46,8 @@ class App extends Component {
     this.setState({currentView: "home"});
   }
 
-  handleThumbnailClick(key) {
-    let articleData = this.state.homeItems.filter(article => article.id === key);
+  handleThumbnailClick(id) {
+    let articleData = this.state.homeItems.filter(article => article.id === id);
     this.setState({
       currentView: "article",
       currentArticle: articleData
