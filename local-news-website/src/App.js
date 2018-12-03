@@ -23,6 +23,7 @@ class App extends Component {
     };
     this.showHome = this.showHome.bind(this);
     this.showLogin = this.showLogin.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
     this.showSignup = this.showSignup.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
     this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
@@ -35,6 +36,12 @@ class App extends Component {
 
   showLogin() {
     this.setState({currentView: "login"});
+  }
+
+  handleLogin(data) {
+    new CallAPI().loginUser(data);
+    // Add callback and negative response
+    this.setState({currentView: "home"});
   }
 
   showSignup() {
@@ -88,7 +95,7 @@ class App extends Component {
       currentView = <Article articleData={this.state.currentArticle}/>
     }
     else if(this.state.currentView === "login") {
-      currentView = <Login/>
+      currentView = <Login onSubmit={this.handleLogin}/>
     }
     else if(this.state.currentView === "signup") {
       currentView = <Signup onSubmit={this.handleSignup}/>

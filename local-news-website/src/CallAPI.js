@@ -26,6 +26,25 @@ class CallAPI {
             callback(error);
         });
     }
+
+
+    loginUser(data) {
+        axios.post(url + '/login', {}, {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + window.btoa(data.username + ":" + data.password)
+            }
+        })
+        .then(function(response) {
+            console.log(response);
+            localStorage.setItem('username', data.username);
+            localStorage.setItem('password', data.password);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
 }
 
 export default CallAPI;
