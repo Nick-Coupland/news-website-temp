@@ -68,6 +68,13 @@ class App extends Component {
 
   handleArticleSubmit(data) {
     console.log(data);
+    new CallAPI().addArticle(data, (err, res) => {
+      if(err) {
+        console.log(err);
+        return;
+      }
+      console.log(res);
+    })
     this.setState({currentView: "home"});
   }
 

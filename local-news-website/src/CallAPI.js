@@ -14,6 +14,20 @@ class CallAPI {
         });
     }
 
+    addArticle(data, callback) {
+        axios.post(url + '/article', {
+            title: data.title,
+            body: data.body,
+            image: data.image
+        })
+        .then(function(response) {
+            callback(null, response);
+        })
+        .catch(function(error) {
+            callback(error);
+        });
+    }
+
 
 
     // --------------------Users--------------------
