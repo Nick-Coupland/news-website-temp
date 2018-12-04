@@ -19,7 +19,12 @@ class CallAPI {
             title: data.title,
             body: data.body,
             image: data.image
-        })
+        }, {
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+            "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
+        }})
         .then(function(response) {
             callback(null, response);
         })
