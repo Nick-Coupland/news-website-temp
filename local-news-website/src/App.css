@@ -103,27 +103,27 @@
 
 
 /* User forms */
-.signupForm, .loginForm{
-    width: 30%;
+.signupForm, .loginForm, .articleForm {
+    width: 50%;
     margin: 10px auto;
     text-align: left;
 }
 
-.signupForm h1, .loginForm h1{
+.signupForm h1, .loginForm h1, .articleForm h1 {
     text-align: center;
 }
 
-.signupForm label, .loginForm label {
+.signupForm label, .loginForm label, .articleForm label {
     font-weight: bold;
 }
 
-.signupForm input, .loginForm input {
+.signupForm input, .loginForm input, .articleForm input, .articleForm textarea {
     width: 100%;
     padding: 10px;
     margin: 6px 0 12px;
 }
 
-.signupForm button, .loginForm button {
+.signupForm button, .loginForm button, .articleForm button {
     width: 100%;
     margin: 24px 0;
     background-color: #187795;
@@ -133,6 +133,6 @@
     padding: 20px;
 }
 
-.signupForm button:hover, .loginForm button:hover {
+.signupForm button:hover, .loginForm button:hover, .articleForm button:hover {
     opacity: 0.8;
 }

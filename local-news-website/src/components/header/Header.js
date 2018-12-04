@@ -17,7 +17,7 @@ class Header extends Component {
         if(localStorage.getItem('username') !== null) {
             accountButtons = <div className="accountButtons">
                 <a href="#default" onClick={this.onSignoutClick}>Sign out</a>
-                {/* <a href="#default" onClick={this.props.onPlusClick}>+</a> */}
+                <a href="#default" onClick={this.props.onPlusClick}>+</a>
             </div>
         }
         else {

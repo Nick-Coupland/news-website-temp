@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
+import ArticleForm from './components/articleForm/ArticleForm';
 import List from './components/list/List';
 import Article from './components/article/Article';
 
@@ -26,6 +27,8 @@ class App extends Component {
     this.handleLogin = this.handleLogin.bind(this);
     this.showSignup = this.showSignup.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
+    this.showArticleForm = this.showArticleForm.bind(this);
+    this.handleArticleSubmit = this.handleArticleSubmit.bind(this);
     this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
     this.updateArticleData = this.updateArticleData.bind(this);
   }
@@ -56,6 +59,15 @@ class App extends Component {
       }
       console.log(result);
     });
+    this.setState({currentView: "home"});
+  }
+
+  showArticleForm() {
+    this.setState({currentView: "articleForm"});
+  }
+
+  handleArticleSubmit(data) {
+    console.log(data);
     this.setState({currentView: "home"});
   }
 
@@ -100,9 +112,12 @@ class App extends Component {
     else if(this.state.currentView === "signup") {
       currentView = <Signup onSubmit={this.handleSignup}/>
     }
+    else if(this.state.currentView === "articleForm") {
+      currentView = <ArticleForm onSubmit={this.handleArticleSubmit}/>
+    }
     return (
       <div>
-        <Header logo={logo} showHome={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup}/>
+        <Header logo={logo} showHome={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup} onPlusClick={this.showArticleForm}/>
         {currentView}
         <Footer/>
       </div>
