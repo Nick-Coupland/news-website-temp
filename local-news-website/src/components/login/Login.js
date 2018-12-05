@@ -27,7 +27,7 @@ class Login extends Component {
     render() {
         return (
             <div className="loginForm">
-            <h1>Log in to Yummy!</h1>
+            <h1>Log in to Nick's News!</h1>
                 <form onSubmit={this.handleLogin}>
                     <label htmlFor="username">Username</label>
                     <input type="text" placeholder="Enter Username" name="username" onChange={this.handleUsernameChange}/>

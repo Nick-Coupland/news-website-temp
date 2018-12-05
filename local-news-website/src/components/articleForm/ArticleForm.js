@@ -41,10 +41,10 @@ class ArticleForm extends Component {
                     <label htmlFor="body">Article Body</label>
                     <textarea placeholder="Enter body text here" name="body" rows="25" onChange={this.handleBodyChange}/>
 
-                    <label htmlFor="image">Recipe Photo</label>
+                    <label htmlFor="image">Article Photo</label>
                     <input type="file" name="image" onChange={this.handleImageChange}/>
 
-                    <button type="submit">Submit recipe</button>
+                    <button type="submit">Submit article</button>
                 </form>
             </div>
         );
