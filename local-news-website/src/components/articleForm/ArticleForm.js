@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class ArticleForm extends Component {
     constructor(props) {
@@ -28,6 +29,9 @@ class ArticleForm extends Component {
 
     handleSubmit() {
         this.props.onSubmit(this.state);
+        const formData = new FormData();
+        formData.append('articleImage', this.state.image);
+        axios.post('http://localhost:8080/fileUpload', formData);
     }
 
     render() {

@@ -18,7 +18,6 @@ class CallAPI {
         axios.post(url + '/article', {
             title: data.title,
             body: data.body,
-            image: data.image
         }, {
         headers: {
             "Access-Control-Allow-Origin": "*",
