@@ -15,10 +15,11 @@ class CallAPI {
     }
 
     addArticle(data, callback) {
-        axios.post(url + '/article', {
-            title: data.title,
-            body: data.body,
-        }, {
+        const formData = new FormData();
+        formData.append('articleImage', data.image);
+        formData.append('title', data.title);
+        formData.append('body', data.body);
+        axios.post(url + '/article', formData, {
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",

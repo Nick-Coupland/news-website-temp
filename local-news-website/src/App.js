@@ -92,7 +92,7 @@ class App extends Component {
         id: item.ArticleID,
         title: item.Title,
         body: item.ArticleBody,
-        photo: item.Location
+        photo: item.ImageLocation
       };
     });
     this.setState({
