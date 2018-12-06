@@ -95,7 +95,8 @@ class App extends Component {
         body: item.ArticleBody,
         photo: item.ImageLocation,
         pinStatus: item.Pinned,
-        likes: item.Likes
+        likes: item.Likes,
+        likeStatus: item.LikeStatus
       };
     });
     this.setState({
@@ -116,6 +117,10 @@ class App extends Component {
     new CallAPI().likeArticle(id);
   }
 
+  handleUnlike(id) {
+    new CallAPI().unlikeArticle(id);
+  }
+
   componentDidMount() {
     new CallAPI().getArticles(this.updateArticleData);
   }
@@ -126,7 +131,7 @@ class App extends Component {
       currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
     }
     else if(this.state.currentView === "article") {
-      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin} handleLike={this.handleLike}/>
+      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin} handleLike={this.handleLike} handleUnlike={this.handleUnlike}/>
     }
     else if(this.state.currentView === "login") {
       currentView = <Login onSubmit={this.handleLogin}/>

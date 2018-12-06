@@ -5,7 +5,12 @@ const url = "http://localhost:8080"
 class CallAPI {
     // --------------------Articles--------------------
     getArticles(callback) {
-        axios.get(url + '/article')
+        axios.get(url + '/article', {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
+            }})
         .then(function(response) {
             callback(response.data);
         })
@@ -71,6 +76,23 @@ class CallAPI {
 
     likeArticle(id) {
         axios.get(url + '/article/like/' + id, {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
+            }
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
+
+
+    unlikeArticle(id) {
+        axios.get(url + '/article/unlike/' + id, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Content-Type": "application/json",
