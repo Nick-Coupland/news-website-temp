@@ -34,7 +34,8 @@ class App extends Component {
   }
 
   showHome() {
-    this.setState({currentView: "home"});
+    // this.setState({currentView: "home"});
+    new CallAPI().getArticles(this.updateArticleData);
   }
 
   showLogin() {
