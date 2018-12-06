@@ -46,6 +46,7 @@ class App extends Component {
     new CallAPI().loginUser(data);
     // Add callback and negative response
     this.setState({currentView: "home"});
+    // new CallAPI().getArticles(this.updateArticleData);
   }
 
   showSignup() {
@@ -94,7 +95,9 @@ class App extends Component {
         title: item.Title,
         body: item.ArticleBody,
         photo: item.ImageLocation,
-        pinStatus: item.Pinned
+        pinStatus: item.Pinned,
+        likes: item.Likes,
+        likeStatus: item.LikeStatus
       };
     });
     this.setState({
@@ -111,6 +114,14 @@ class App extends Component {
     new CallAPI().unpinArticle(id);
   }
 
+  handleLike(id) {
+    new CallAPI().likeArticle(id);
+  }
+
+  handleUnlike(id) {
+    new CallAPI().unlikeArticle(id);
+  }
+
   componentDidMount() {
     new CallAPI().getArticles(this.updateArticleData);
   }
@@ -121,7 +132,7 @@ class App extends Component {
       currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
     }
     else if(this.state.currentView === "article") {
-      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin}/>
+      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin} handleLike={this.handleLike} handleUnlike={this.handleUnlike}/>
     }
     else if(this.state.currentView === "login") {
       currentView = <Login onSubmit={this.handleLogin}/>

@@ -1,4 +1,4 @@
-#pinButton {
+#pinButton, #likeButton {
     float: right;
     margin: 12px;
     background-color: #187795;
@@ -6,8 +6,14 @@
     border: none;
     cursor: pointer;
     padding: 16px;
+    line-height: 1em;
 }
 
-#pinButton:hover {
+#pinButton:hover, #likeButton:hover {
     opacity: 0.8;
+}
+
+.infoPanel * {
+    display: inline;
+    margin: 12px;
 }

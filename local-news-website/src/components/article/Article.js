@@ -6,6 +6,8 @@ class Article extends Component {
         super(props);
         this.handlePinClick = this.handlePinClick.bind(this);
         this.handleUnpinClick = this.handleUnpinClick.bind(this);
+        this.handleLikeClick = this.handleLikeClick.bind(this);
+        this.handleUnlikeClick = this.handleUnlikeClick.bind(this);
     }
 
     componentDidMount() {
@@ -14,14 +16,23 @@ class Article extends Component {
 
     handlePinClick() {
         this.props.handlePin(this.props.articleData[0].id);
-        document.getElementById('pinButton').style.display = "none";
-        alert("Article pinned.");
+        document.getElementById('pinButton').innerHTML = "&#128204; Pinned";
     }
 
     handleUnpinClick() {
         this.props.handleUnpin(this.props.articleData[0].id);
-        document.getElementById('pinButton').style.display = "none";
-        alert("Article unpinned.");
+        document.getElementById('pinButton').innerHTML = "&times; Unpinned";
+    }
+
+    handleLikeClick() {
+        this.props.handleLike(this.props.articleData[0].id);
+        document.getElementById('likeButton').innerHTML = "&#10003; Liked";
+        // document.getElementById('likeButton').removeAttribute('onClick');
+    }
+
+    handleUnlikeClick() {
+        this.props.handleUnlike(this.props.articleData[0].id);
+        document.getElementById('likeButton').innerHTML = "&times; Unliked";
     }
 
     render() {
@@ -33,9 +44,32 @@ class Article extends Component {
             pinButton = <button id="pinButton" onClick={this.handleUnpinClick} type="button">Unpin article</button>
         }
 
+        let likeButton;
+        if(localStorage.username !== undefined && this.props.articleData[0].likeStatus === null) {
+            likeButton = <button id="likeButton" onClick={this.handleLikeClick} type="button">Like</button>
+        }
+        else if(localStorage.username !== undefined && this.props.articleData[0].likeStatus === 1) {
+            likeButton = <button id="likeButton" onClick={this.handleUnlikeClick} type="button">Unlike</button>
+        }
+
+        let likeCount;
+        console.log(Boolean(this.props.articleData[0].likes))
+        if(this.props.articleData[0].likes === false) {
+            likeCount = <p>No likes yet!</p>
+        }
+        else {
+            likeCount = <p>Likes: {this.props.articleData[0].likes}</p>
+        }
+
         return (
             <div className="articleView row">
-                {pinButton}
+                <div className="infoPanel row">
+                    {likeCount}
+                    {likeButton}
+                    {pinButton}
+                    <p>Like status?{this.props.articleData[0].likeStatus}</p>
+                </div>
+
                 <div className="clear"></div>
                 <img className="col-m-6" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
                 <h1 className="col-m-6">{this.props.articleData[0].title}</h1>
