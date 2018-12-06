@@ -14,6 +14,7 @@ class CallAPI {
         });
     }
 
+
     addArticle(data, callback) {
         const formData = new FormData();
         formData.append('articleImage', data.image);
@@ -30,6 +31,39 @@ class CallAPI {
         })
         .catch(function(error) {
             callback(error);
+        });
+    }
+
+
+    pinArticle(id) {
+        axios.get(url + '/article/pin/' + id, {}, {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
+            }
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
+
+    unpinArticle(id) {
+        axios.get(url + '/article/unpin/' + id, {}, {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
+            }
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+        .catch(function(error) {
+            console.log(error);
         });
     }
 

@@ -34,7 +34,8 @@ class App extends Component {
   }
 
   showHome() {
-    this.setState({currentView: "home"});
+    // this.setState({currentView: "home"});
+    new CallAPI().getArticles(this.updateArticleData);
   }
 
   showLogin() {
@@ -92,13 +93,22 @@ class App extends Component {
         id: item.ArticleID,
         title: item.Title,
         body: item.ArticleBody,
-        photo: item.ImageLocation
+        photo: item.ImageLocation,
+        pinStatus: item.Pinned
       };
     });
     this.setState({
       homeItems: data2,
       currentView: "home"
     });
+  }
+
+  handlePin(id) {
+    new CallAPI().pinArticle(id);
+  }
+
+  handleUnpin(id) {
+    new CallAPI().unpinArticle(id);
   }
 
   componentDidMount() {
@@ -111,7 +121,7 @@ class App extends Component {
       currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
     }
     else if(this.state.currentView === "article") {
-      currentView = <Article articleData={this.state.currentArticle}/>
+      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin}/>
     }
     else if(this.state.currentView === "login") {
       currentView = <Login onSubmit={this.handleLogin}/>
