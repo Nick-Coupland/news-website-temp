@@ -6,6 +6,7 @@ class Article extends Component {
         super(props);
         this.handlePinClick = this.handlePinClick.bind(this);
         this.handleUnpinClick = this.handleUnpinClick.bind(this);
+        this.handleLikeClick = this.handleLikeClick.bind(this);
     }
 
     componentDidMount() {
@@ -24,6 +25,10 @@ class Article extends Component {
         alert("Article unpinned.");
     }
 
+    handleLikeClick() {
+        this.props.handleLike(this.props.articleData[0].id);
+    }
+
     render() {
         let pinButton;
         if(localStorage.username === "admin" && this.props.articleData[0].pinStatus === 0) {
@@ -36,6 +41,7 @@ class Article extends Component {
         return (
             <div className="articleView row">
                 {pinButton}
+                <button id="likeButton" onClick={this.handleLikeClick} type="button">&#10003; Like</button>
                 <div className="clear"></div>
                 <img className="col-m-6" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
                 <h1 className="col-m-6">{this.props.articleData[0].title}</h1>

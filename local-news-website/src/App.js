@@ -111,6 +111,10 @@ class App extends Component {
     new CallAPI().unpinArticle(id);
   }
 
+  handleLike(id) {
+    new CallAPI().likeArticle(id);
+  }
+
   componentDidMount() {
     new CallAPI().getArticles(this.updateArticleData);
   }
@@ -121,7 +125,7 @@ class App extends Component {
       currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
     }
     else if(this.state.currentView === "article") {
-      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin}/>
+      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin} handleUnpin={this.handleUnpin} handleLike={this.handleLike}/>
     }
     else if(this.state.currentView === "login") {
       currentView = <Login onSubmit={this.handleLogin}/>
