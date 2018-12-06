@@ -51,6 +51,7 @@ class CallAPI {
         });
     }
 
+
     unpinArticle(id) {
         axios.get(url + '/article/unpin/' + id, {
             headers: {
@@ -66,6 +67,7 @@ class CallAPI {
             console.log(error);
         });
     }
+
 
     likeArticle(id) {
         axios.get(url + '/article/like/' + id, {

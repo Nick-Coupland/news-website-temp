@@ -94,7 +94,8 @@ class App extends Component {
         title: item.Title,
         body: item.ArticleBody,
         photo: item.ImageLocation,
-        pinStatus: item.Pinned
+        pinStatus: item.Pinned,
+        likes: item.Likes
       };
     });
     this.setState({

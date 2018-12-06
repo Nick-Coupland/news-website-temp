@@ -38,9 +38,18 @@ class Article extends Component {
             pinButton = <button id="pinButton" onClick={this.handleUnpinClick} type="button">Unpin article</button>
         }
 
+        // let likeButton;
+        // if(localStorage.username === !null && this.props.articleData[0].likeStatus === 0) {
+        //     likeButton = <button id="likeButton" onClick={this.handleLikeClick} type="button">&#10003; Like</button>
+        // }
+        // else if(localStorage.username === !null && this.props.articleData[0].likeStatus === 1) {
+        //     likeButton = <button id="likeButton" onClick={this.handleLikeClick} type="button">&times; Unlike</button>
+        // }
+
         return (
             <div className="articleView row">
                 {pinButton}
+                <p>{this.props.articleData[0].likes}</p>
                 <button id="likeButton" onClick={this.handleLikeClick} type="button">&#10003; Like</button>
                 <div className="clear"></div>
                 <img className="col-m-6" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
