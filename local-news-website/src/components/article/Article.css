@@ -12,3 +12,8 @@
 #pinButton:hover, #likeButton:hover {
     opacity: 0.8;
 }
+
+.infoPanel * {
+    display: inline;
+    margin: 12px;
+}

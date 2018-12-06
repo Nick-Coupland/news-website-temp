@@ -46,6 +46,7 @@ class App extends Component {
     new CallAPI().loginUser(data);
     // Add callback and negative response
     this.setState({currentView: "home"});
+    // new CallAPI().getArticles(this.updateArticleData);
   }
 
   showSignup() {
