@@ -33,6 +33,23 @@ class CallAPI {
         });
     }
 
+    pinArticle(id) {
+        axios.get(url + '/article/pin/' + id, {}, {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
+            }
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+    }
+
 
 
     // --------------------Users--------------------

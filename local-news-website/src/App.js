@@ -101,6 +101,10 @@ class App extends Component {
     });
   }
 
+  handlePin(id) {
+    new CallAPI().pinArticle(id);
+  }
+
   componentDidMount() {
     new CallAPI().getArticles(this.updateArticleData);
   }
@@ -111,7 +115,7 @@ class App extends Component {
       currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
     }
     else if(this.state.currentView === "article") {
-      currentView = <Article articleData={this.state.currentArticle}/>
+      currentView = <Article articleData={this.state.currentArticle} handlePin={this.handlePin}/>
     }
     else if(this.state.currentView === "login") {
       currentView = <Login onSubmit={this.handleLogin}/>

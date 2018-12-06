@@ -2,13 +2,29 @@ import React, { Component } from 'react';
 import './Article.css';
 
 class Article extends Component {
+    constructor(props) {
+        super(props);
+        this.handlePinClick = this.handlePinClick.bind(this);
+    }
+
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
+    handlePinClick() {
+        this.props.handlePin(this.props.articleData[0].id);
+    }
+
     render() {
+        let pinButton;
+        if(localStorage.username === "admin") {
+            pinButton = <button id="pinButton" onClick={this.handlePinClick} type="button">Pin article</button>
+        }
+
         return (
             <div className="articleView row">
+                {pinButton}
+                <div className="clear"></div>
                 <img className="col-m-6" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
                 <h1 className="col-m-6">{this.props.articleData[0].title}</h1>
                 <p className="articleBody col-m-12">{this.props.articleData[0].body}</p>
