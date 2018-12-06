@@ -5,6 +5,7 @@ class Article extends Component {
     constructor(props) {
         super(props);
         this.handlePinClick = this.handlePinClick.bind(this);
+        this.handleUnpinClick = this.handleUnpinClick.bind(this);
     }
 
     componentDidMount() {
@@ -13,12 +14,23 @@ class Article extends Component {
 
     handlePinClick() {
         this.props.handlePin(this.props.articleData[0].id);
+        document.getElementById('pinButton').style.display = "none";
+        alert("Article pinned.");
+    }
+
+    handleUnpinClick() {
+        this.props.handleUnpin(this.props.articleData[0].id);
+        document.getElementById('pinButton').style.display = "none";
+        alert("Article unpinned.");
     }
 
     render() {
         let pinButton;
-        if(localStorage.username === "admin") {
+        if(localStorage.username === "admin" && this.props.articleData[0].pinStatus === 0) {
             pinButton = <button id="pinButton" onClick={this.handlePinClick} type="button">Pin article</button>
+        }
+        else if(localStorage.username === "admin" && this.props.articleData[0].pinStatus === 1) {
+            pinButton = <button id="pinButton" onClick={this.handleUnpinClick} type="button">Unpin article</button>
         }
 
         return (
