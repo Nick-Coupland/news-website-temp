@@ -27,7 +27,7 @@ class Card extends Component {
 
         let pin;
         if(this.props.pinStatus === 1) {
-            pin = <h3 id="pin">&#128204;</h3>
+            pin = <h3 id="pin"><span role="img" aria-label="pinIcon">&#128204;</span></h3>
         }
 
         return (
