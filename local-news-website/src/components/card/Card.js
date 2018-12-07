@@ -25,17 +25,22 @@ class Card extends Component {
             like = "likes"
         }
 
+        let pin;
+        if(this.props.pinStatus === 1) {
+            pin = <h3 id="pin">&#128204;</h3>
+        }
+
         return (
-            <div className="card col-m-8" onClick={this.handleClick}>
-                <div className="testClass">
+            <div className="card col-xs-12 col-s-12 col-m-10 col-l-10 col-xl-8" onClick={this.handleClick}>
+                {pin}
+                <div className="col-xs-6 col-s-6 col-s-6 col-m-6">
                     <img src={this.props.photo} alt={this.props.imgAlt}/>
                 </div>
-                <div className="textContainer">
+                <div className="textContainer col-xs-6 col-s-6 col-m-6">
                     <h3><b>{this.props.title}</b></h3>
                     <h4>By {this.props.author} | {this.props.likes} {like}</h4>
                     <p>{this.props.body}</p>
                 </div>
-                <div className="clear"></div>
             </div>
         );
     }

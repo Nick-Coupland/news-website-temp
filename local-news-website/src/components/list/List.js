@@ -11,6 +11,7 @@ class List extends Component {
                     photo={data.photo}
                     author={data.author}
                     likes={data.likes}
+                    pinStatus={data.pinStatus}
                     onClick={this.props.onClick}
             />
         )}

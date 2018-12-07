@@ -70,11 +70,10 @@ class Article extends Component {
                     {pinButton}
                 </div>
 
-                <div className="clear"></div>
-                <img className="col-m-6" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
-                <h1 className="col-m-6">{this.props.articleData[0].title}</h1>
+                <h1 className="col-m-10">{this.props.articleData[0].title}</h1>
                 <h3 className="col-m-6">Written by {this.props.articleData[0].author} | {this.props.articleData[0].likes} {like}</h3>
-                <p className="articleBody col-m-12">{this.props.articleData[0].body}</p>
+                <img className="col-m-8" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
+                <p className="articleBody col-m-10">{this.props.articleData[0].body}</p>
             </div>
         );
     }
