@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
+    // Sets component state and binds functions to this object
     constructor(props) {
         super(props);
         this.state = {
@@ -12,14 +13,17 @@ class Login extends Component {
         this.handleLogin = this.handleLogin.bind(this);
     }
 
+    // Stores current value of username to state for submission
     handleUsernameChange(event) {
         this.setState({username: event.target.value});
     }
 
+    // Stores current value of password to state for submission
     handlePasswordChange(event) {
         this.setState({password: event.target.value});
     }
 
+    // Sends user inputted value to handleLogin function
     handleLogin() {
         this.props.onSubmit(this.state);
     }

@@ -1,9 +1,11 @@
 import axios from 'axios';
+// Configures API URL
 const url = "http://localhost:8080"
 
 
 class CallAPI {
     // --------------------Articles--------------------
+    // Pulls article data from API
     getArticles(callback) {
         axios.get(url + '/article', {
             headers: {
@@ -20,6 +22,7 @@ class CallAPI {
     }
 
 
+    // Adds user inputted article to API
     addArticle(data, callback) {
         const formData = new FormData();
         formData.append('articleImage', data.image);
@@ -40,6 +43,7 @@ class CallAPI {
     }
 
 
+    // Pins article at top of homepage list (admin only)
     pinArticle(id) {
         axios.get(url + '/article/pin/' + id, {
             headers: {
@@ -57,6 +61,7 @@ class CallAPI {
     }
 
 
+    // Unpins article from top of homepage list (admin only)
     unpinArticle(id) {
         axios.get(url + '/article/unpin/' + id, {
             headers: {
@@ -74,6 +79,7 @@ class CallAPI {
     }
 
 
+    // Likes article
     likeArticle(id) {
         axios.get(url + '/article/like/' + id, {
             headers: {
@@ -91,6 +97,7 @@ class CallAPI {
     }
 
 
+    // Unlikes article
     unlikeArticle(id) {
         axios.get(url + '/article/unlike/' + id, {
             headers: {
@@ -110,6 +117,7 @@ class CallAPI {
 
 
     // --------------------Users--------------------
+    // Sends new user data to API
     addUser(data, callback) {
         axios.post(url + '/user', {
             username: data.username,
@@ -124,6 +132,7 @@ class CallAPI {
     }
 
 
+    // Sends inputted user data to API for authentication
     loginUser(data, callback) {
         axios.post(url + '/login', {}, {
             headers: {
@@ -134,6 +143,7 @@ class CallAPI {
         })
         .then(function(response) {
             console.log(response);
+            // Stores user credentials to local storage once authenticated
             localStorage.setItem('username', data.username);
             localStorage.setItem('password', data.password);
             callback(null);

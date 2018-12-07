@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+// Import main CSS file
 import './App.css';
 
+// Import React components
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
@@ -9,12 +11,14 @@ import ArticleForm from './components/articleForm/ArticleForm';
 import List from './components/list/List';
 import Article from './components/article/Article';
 
+// Import module to send API requests
 import CallAPI from './CallAPI';
 
 import logo from './img/logo.svg';
 
 
 class App extends Component {
+  // Configures component state and binds functions to this object
   constructor(props) {
     super(props);
     this.state = {
@@ -33,31 +37,35 @@ class App extends Component {
     this.updateArticleData = this.updateArticleData.bind(this);
   }
 
+  // Shows homepage
   showHome() {
-    // this.setState({currentView: "home"});
     new CallAPI().getArticles(this.updateArticleData);
     window.scrollTo(0, 0);
   }
 
+  // Shows login page
   showLogin() {
     this.setState({currentView: "login"});
   }
 
+  // Calls API to process login
   handleLogin(data) {
     new CallAPI().loginUser(data, (err) => {
       if(err) {
         console.log(err);
+        alert("Error loggin in. Please try again.")
         return;
       }
-      console.log("test1")
       this.showHome();
     });
   }
 
+  // Shows signup page
   showSignup() {
     this.setState({currentView: "signup"});
   }
 
+  // Calls API to process signup
   handleSignup(data) {
     new CallAPI().addUser(data, (err, result) => {
       if(err) {
@@ -69,11 +77,13 @@ class App extends Component {
     this.setState({currentView: "home"});
   }
 
+  // Shows new article form
   showArticleForm() {
     this.setState({currentView: "articleForm"});
     window.scrollTo(0, 0);
   }
 
+  // Calls API to process article submission
   handleArticleSubmit(data) {
     console.log(data);
     new CallAPI().addArticle(data, (err, res) => {
@@ -86,6 +96,7 @@ class App extends Component {
     this.setState({currentView: "home"});
   }
 
+  // Sets state to allow conditional rendering of article page
   handleThumbnailClick(id) {
     let articleData = this.state.homeItems.filter(article => article.id === id);
     this.setState({
@@ -94,6 +105,7 @@ class App extends Component {
     });
   }
 
+  // Calls API to pull homepage article data
   updateArticleData(data) {
     let data2 = data.map(item => {
       return {
@@ -113,27 +125,33 @@ class App extends Component {
     });
   }
 
+  // Calls API to process pinning article (admin only)
   handlePin(id) {
     new CallAPI().pinArticle(id);
   }
 
+  // Calls API to process unpinning article (admin only)
   handleUnpin(id) {
     new CallAPI().unpinArticle(id);
   }
 
+  // Calls API to process positive article rating
   handleLike(id) {
     new CallAPI().likeArticle(id);
   }
 
+  // Calls API to process negative article rating
   handleUnlike(id) {
     new CallAPI().unlikeArticle(id);
   }
 
+  // Pulls through homepage article data on rendering of component
   componentDidMount() {
     new CallAPI().getArticles(this.updateArticleData);
   }
 
   render() {
+    // Assigns currentView variable for conditional rendering of imported components
     let currentView;
     if(this.state.currentView === "home") {
       currentView = <List items={this.state.homeItems} onClick={this.handleThumbnailClick}/>
@@ -151,6 +169,7 @@ class App extends Component {
       currentView = <ArticleForm onSubmit={this.handleArticleSubmit}/>
     }
     return (
+      // Renders header, footer, and main page content
       <div>
         <Header logo={logo} showHome={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup} onPlusClick={this.showArticleForm}/>
         {currentView}
@@ -160,4 +179,5 @@ class App extends Component {
   }
 }
 
+// Exports component for rendering
 export default App;

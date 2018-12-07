@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+// Import Formik and Yup to create and validate user input on form
 import {Formik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 
 class Signup extends Component {
+    // Sends form data to handleSignup function
     handleSubmit(submitValues) {
         this.props.onSubmit(submitValues);
     }
 
+    // Defines validation criteria for form fields (using Yup)
     SignupSchema = Yup.object().shape({
         username: Yup.string()
             .min(3, "Username must be at least 3 characters")
@@ -33,6 +36,7 @@ class Signup extends Component {
                     retypePassword: ""
                 }}
                 validationSchema={this.SignupSchema}
+                // Sends values to onSubmit function
                 onSubmit={(values) => {
                     this.handleSubmit(values);
                 }}

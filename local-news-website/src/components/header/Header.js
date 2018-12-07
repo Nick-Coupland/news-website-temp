@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import './Header.css';
 
 class Header extends Component {
+    // Binds functions to this object
     constructor(props) {
         super(props);
         this.onSignoutClick = this.onSignoutClick.bind(this);
     }
 
+    // Clears localStorage simulating signout, redirects to homepage
     onSignoutClick() {
         localStorage.clear();
         this.props.showHome();
     }
 
     render() {
+        // Allows conditional rendering of account buttons based on login status
         let accountButtons;
         if(localStorage.getItem('username') !== null) {
             accountButtons = <div className="accountButtons">

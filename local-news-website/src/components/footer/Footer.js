@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './Footer.css';
 
 class Footer extends Component {
+    // Scrolls to top on button click
     handleTopClick() {
         window.scrollTo(0, 0);
     }
 
     render() {
         return (
+            // Renders footer content
             <div className="footer row">
                 <div className="left col-m-4">
                     <h2>About Nick's News</h2>

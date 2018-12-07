@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class ArticleForm extends Component {
+    // Sets component state and binds functions to this object
     constructor(props) {
         super(props);
         this.state = {
@@ -14,18 +15,22 @@ class ArticleForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // Saves current title value to state ready for submission
     handleTitleChange(event) {
         this.setState({title: event.target.value});
     }
 
+    // Saves current body value to state ready for submission
     handleBodyChange(event) {
         this.setState({body: event.target.value});
     }
 
+    // Saves current image details to state ready for submission
     handleImageChange(event) {
         this.setState({image: event.target.files[0]});
     }
 
+    // Sends form data to handleArticleSubmit function
     handleSubmit() {
         this.props.onSubmit(this.state);
     }
