@@ -24,7 +24,8 @@ class Login extends Component {
     }
 
     // Sends user inputted value to handleLogin function
-    handleLogin() {
+    handleLogin(event) {
+        event.preventDefault();
         this.props.onSubmit(this.state);
     }
 
