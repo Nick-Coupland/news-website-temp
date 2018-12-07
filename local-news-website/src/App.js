@@ -52,8 +52,7 @@ class App extends Component {
   handleLogin(data) {
     new CallAPI().loginUser(data, (err) => {
       if(err) {
-        console.log(err);
-        alert("Error loggin in. Please try again.")
+        alert("Error loggin in. Please try again.");
         return;
       }
       this.showHome();
@@ -67,14 +66,13 @@ class App extends Component {
 
   // Calls API to process signup
   handleSignup(data) {
-    new CallAPI().addUser(data, (err, result) => {
+    new CallAPI().addUser(data, (err) => {
       if(err) {
-        console.log(err);
+        alert("Error signing in. Please try again.");
         return;
       }
-      console.log(result);
+      this.showHome();
     });
-    this.setState({currentView: "home"});
   }
 
   // Shows new article form
@@ -85,15 +83,13 @@ class App extends Component {
 
   // Calls API to process article submission
   handleArticleSubmit(data) {
-    console.log(data);
-    new CallAPI().addArticle(data, (err, res) => {
+    new CallAPI().addArticle(data, (err) => {
       if(err) {
-        console.log(err);
+        alert("Error submitting article. Please try again.");
         return;
       }
-      console.log(res);
-    })
-    this.setState({currentView: "home"});
+      this.showHome();
+    });
   }
 
   // Sets state to allow conditional rendering of article page
@@ -106,7 +102,11 @@ class App extends Component {
   }
 
   // Calls API to pull homepage article data
-  updateArticleData(data) {
+  updateArticleData(err, data) {
+    if(err) {
+      alert("Error getting articles. Please try again.");
+      return;
+    }
     let data2 = data.map(item => {
       return {
         id: item.ArticleID,

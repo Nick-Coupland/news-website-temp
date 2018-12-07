@@ -14,10 +14,12 @@ class CallAPI {
                 "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
             }})
         .then(function(response) {
-            callback(response.data);
+            console.log(response);
+            callback(null, response.data);
         })
         .catch(function(error) {
             console.log(error);
+            callback(error);
         });
     }
 
@@ -35,9 +37,11 @@ class CallAPI {
             "Authorization": "Basic " + window.btoa(localStorage.getItem('username') + ":" + localStorage.getItem('password'))
         }})
         .then(function(response) {
-            callback(null, response);
+            console.log(response);
+            callback(null);
         })
         .catch(function(error) {
+            console.log(error);
             callback(error);
         });
     }
@@ -124,9 +128,11 @@ class CallAPI {
             password: data.password
         })
         .then(function(response) {
-            callback(null, response);
+            console.log(response);
+            callback(null);
         })
         .catch(function(error) {
+            console.log(error);
             callback(error);
         });
     }
@@ -149,6 +155,7 @@ class CallAPI {
             callback(null);
         })
         .catch(function(error) {
+            console.log(error);
             callback(error);
         });
     }
