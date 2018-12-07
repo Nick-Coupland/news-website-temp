@@ -65,15 +65,16 @@ class Article extends Component {
 
         return (
             <div className="articleView row">
-                <div className="infoPanel row">
+                <div className="infoPanel col-xs-12 col-s-12 col-m-10 col-l-10 col-xl-8">
                     {likeButton}
                     {pinButton}
                 </div>
+                <div className="clear"></div>
 
-                <h1 className="col-m-10">{this.props.articleData[0].title}</h1>
-                <h3 className="col-m-6">Written by {this.props.articleData[0].author} | {this.props.articleData[0].likes} {like}</h3>
-                <img className="col-m-8" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
-                <p className="articleBody col-m-10">{this.props.articleData[0].body}</p>
+                <h1 className="col-xs-12 col-s-12 col-m-10 col-l-10 col-xl-8">{this.props.articleData[0].title}</h1>
+                <h3 className="col-xs-12 col-s-12 col-m-10 col-l-10 col-xl-8">Written by {this.props.articleData[0].author} | {this.props.articleData[0].likes} {like}</h3>
+                <img className="col-xs-12 col-s-12 col-m-10 col-l-10 col-xl-8" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
+                <p className="col-xs-12 col-s-12 col-m-10 col-l-10 col-xl-8">{this.props.articleData[0].body}</p>
             </div>
         );
     }

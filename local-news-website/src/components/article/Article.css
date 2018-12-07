@@ -1,6 +1,6 @@
 #pinButton, #likeButton {
     float: right;
-    margin: 12px;
+    margin: 0 12px;
     background-color: #187795;
     color: #BED8D4;
     border: none;
@@ -18,7 +18,12 @@
     margin: 12px;
 }
 
-.articleView {
-    /* width: 100%; */
-    /* margin: auto; */
+.articleView * {
+    margin: 24px auto;
+    float: none;
+    padding: 0 12px;
+}
+
+.articleView img {
+    display: block;
 }
