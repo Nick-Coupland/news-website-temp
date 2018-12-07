@@ -9,6 +9,8 @@ class List extends Component {
                     title={data.title}
                     body={data.body}
                     photo={data.photo}
+                    author={data.author}
+                    likes={data.likes}
                     onClick={this.props.onClick}
             />
         )}

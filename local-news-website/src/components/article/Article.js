@@ -36,6 +36,17 @@ class Article extends Component {
     }
 
     render() {
+        let like;
+        if(this.props.articleData[0].likes <= 0) {
+            like = "No likes yet"
+        }
+        else if(this.props.articleData[0].likes === 1) {
+            like = "Like"
+        }
+        else {
+            like = "likes"
+        }
+
         let pinButton;
         if(localStorage.username === "admin" && this.props.articleData[0].pinStatus === 0) {
             pinButton = <button id="pinButton" onClick={this.handlePinClick} type="button">Pin article</button>
@@ -52,27 +63,9 @@ class Article extends Component {
             likeButton = <button id="likeButton" onClick={this.handleUnlikeClick} type="button">Unlike</button>
         }
 
-        let likeCount;
-        if(this.props.articleData[0].likes === null) {
-            likeCount = <p>No likes yet!</p>
-        }
-        else {
-            likeCount = <p>Likes: {this.props.articleData[0].likes}</p>
-        }
-
-        let likeStatus;
-        if(this.props.articleData[0].likeStatus === null) {
-            likeStatus = <p>Not liked</p>
-        }
-        else {
-            likeStatus = <p>Liked</p>
-        }
-
         return (
             <div className="articleView row">
                 <div className="infoPanel row">
-                    {likeCount}
-                    {likeStatus}
                     {likeButton}
                     {pinButton}
                 </div>
@@ -80,6 +73,7 @@ class Article extends Component {
                 <div className="clear"></div>
                 <img className="col-m-6" src={this.props.articleData[0].photo} alt={this.props.articleData[0].title}/>
                 <h1 className="col-m-6">{this.props.articleData[0].title}</h1>
+                <h3 className="col-m-6">Written by {this.props.articleData[0].author} | {this.props.articleData[0].likes} {like}</h3>
                 <p className="articleBody col-m-12">{this.props.articleData[0].body}</p>
             </div>
         );

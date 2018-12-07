@@ -97,6 +97,7 @@ class App extends Component {
         title: item.Title,
         body: item.ArticleBody,
         photo: item.ImageLocation,
+        author: item.Author,
         pinStatus: item.Pinned,
         likes: item.Likes,
         likeStatus: item.LikeStatus

@@ -14,6 +14,17 @@ class Card extends Component {
 
 
     render() {
+        let like;
+        if(this.props.likes <= 0) {
+            like = "No likes yet"
+        }
+        else if(this.props.likes === 1) {
+            like = "Like"
+        }
+        else {
+            like = "likes"
+        }
+
         return (
             <div className="card col-m-8" onClick={this.handleClick}>
                 <div className="testClass">
@@ -21,6 +32,7 @@ class Card extends Component {
                 </div>
                 <div className="textContainer">
                     <h3><b>{this.props.title}</b></h3>
+                    <h4>By {this.props.author} | {this.props.likes} {like}</h4>
                     <p>{this.props.body}</p>
                 </div>
                 <div className="clear"></div>
