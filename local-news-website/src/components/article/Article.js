@@ -53,21 +53,28 @@ class Article extends Component {
         }
 
         let likeCount;
-        console.log(Boolean(this.props.articleData[0].likes))
-        if(this.props.articleData[0].likes === false) {
+        if(this.props.articleData[0].likes === null) {
             likeCount = <p>No likes yet!</p>
         }
         else {
             likeCount = <p>Likes: {this.props.articleData[0].likes}</p>
         }
 
+        let likeStatus;
+        if(this.props.articleData[0].likeStatus === null) {
+            likeStatus = <p>Not liked</p>
+        }
+        else {
+            likeStatus = <p>Liked</p>
+        }
+
         return (
             <div className="articleView row">
                 <div className="infoPanel row">
                     {likeCount}
+                    {likeStatus}
                     {likeButton}
                     {pinButton}
-                    <p>Like status?{this.props.articleData[0].likeStatus}</p>
                 </div>
 
                 <div className="clear"></div>

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './Footer.css';
 
 class Footer extends Component {
+    handleTopClick() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div className="footer">
@@ -18,9 +22,9 @@ class Footer extends Component {
                 <div className="center">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="#default">Home</a></li>
-                        <li><a href="#default">Post new article</a></li>
-                        <li><a href="#default">Top</a></li>
+                        <li onClick={this.props.showHome}>Home</li>
+                        <li onClick={this.props.showArticleForm}>Post new article</li>
+                        <li onClick={this.handleTopClick}>Top</li>
                     </ul>
                 </div>
             </div>

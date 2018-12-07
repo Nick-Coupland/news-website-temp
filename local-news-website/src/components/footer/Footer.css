@@ -19,16 +19,11 @@
 .footer .center {
     margin: auto;
     text-align: center;
-    /* width: 100%; */
 }
 
-.footer a {
+.footer .center p {
     text-decoration: none;
     color: white;
-}
-
-.footer a:hover {
-    opacity: 0.8;
 }
 
 .footer ul {
@@ -37,5 +32,10 @@
 
 .footer li {
     display: inline;
-    padding-right: 10px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.footer .center li:hover {
+    opacity: 0.8;
 }

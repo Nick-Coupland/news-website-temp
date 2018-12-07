@@ -36,6 +36,7 @@ class App extends Component {
   showHome() {
     // this.setState({currentView: "home"});
     new CallAPI().getArticles(this.updateArticleData);
+    window.scrollTo(0, 0);
   }
 
   showLogin() {
@@ -66,6 +67,7 @@ class App extends Component {
 
   showArticleForm() {
     this.setState({currentView: "articleForm"});
+    window.scrollTo(0, 0);
   }
 
   handleArticleSubmit(data) {
@@ -147,7 +149,7 @@ class App extends Component {
       <div>
         <Header logo={logo} showHome={this.showHome} onLoginClick={this.showLogin} onSignupClick={this.showSignup} onPlusClick={this.showArticleForm}/>
         {currentView}
-        <Footer/>
+        <Footer showHome={this.showHome} showArticleForm={this.showArticleForm}/>
       </div>
     );
   }
