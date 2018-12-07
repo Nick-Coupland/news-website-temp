@@ -124,7 +124,7 @@ class CallAPI {
     }
 
 
-    loginUser(data) {
+    loginUser(data, callback) {
         axios.post(url + '/login', {}, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -136,9 +136,10 @@ class CallAPI {
             console.log(response);
             localStorage.setItem('username', data.username);
             localStorage.setItem('password', data.password);
+            callback(null);
         })
         .catch(function(error) {
-            console.log(error);
+            callback(error);
         });
     }
 }

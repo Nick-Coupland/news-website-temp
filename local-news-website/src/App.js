@@ -44,10 +44,14 @@ class App extends Component {
   }
 
   handleLogin(data) {
-    new CallAPI().loginUser(data);
-    // Add callback and negative response
-    this.setState({currentView: "home"});
-    // new CallAPI().getArticles(this.updateArticleData);
+    new CallAPI().loginUser(data, (err) => {
+      if(err) {
+        console.log(err);
+        return;
+      }
+      console.log("test1")
+      this.showHome();
+    });
   }
 
   showSignup() {
