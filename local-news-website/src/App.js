@@ -72,6 +72,7 @@ class App extends Component {
         return;
       }
       this.showHome();
+      alert("Signup successful.")
     });
   }
 
@@ -89,6 +90,7 @@ class App extends Component {
         return;
       }
       this.showHome();
+      alert("Submitted for verification.")
     });
   }
 

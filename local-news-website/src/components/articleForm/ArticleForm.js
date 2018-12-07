@@ -31,7 +31,8 @@ class ArticleForm extends Component {
     }
 
     // Sends form data to handleArticleSubmit function
-    handleSubmit() {
+    handleSubmit(event) {
+        event.preventDefault();
         this.props.onSubmit(this.state);
     }
 

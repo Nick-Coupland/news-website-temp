@@ -32,7 +32,6 @@ class Article extends Component {
     handleLikeClick() {
         this.props.handleLike(this.props.articleData[0].id);
         document.getElementById('likeButton').innerHTML = "&#10003; Liked";
-        // document.getElementById('likeButton').removeAttribute('onClick');
     }
 
     // Sends ArticleID to handleUnlike function
