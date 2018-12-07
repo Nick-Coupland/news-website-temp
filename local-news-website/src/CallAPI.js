@@ -48,7 +48,7 @@ class CallAPI {
 
 
     // Pins article at top of homepage list (admin only)
-    pinArticle(id) {
+    pinArticle(id, callback) {
         axios.get(url + '/article/pin/' + id, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -58,15 +58,17 @@ class CallAPI {
         })
         .then(function(response) {
             console.log(response);
+            callback(null);
         })
         .catch(function(error) {
             console.log(error);
+            callback(error);
         });
     }
 
 
     // Unpins article from top of homepage list (admin only)
-    unpinArticle(id) {
+    unpinArticle(id, callback) {
         axios.get(url + '/article/unpin/' + id, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -76,15 +78,17 @@ class CallAPI {
         })
         .then(function(response) {
             console.log(response);
+            callback(null);
         })
         .catch(function(error) {
             console.log(error);
+            callback(error);
         });
     }
 
 
     // Likes article
-    likeArticle(id) {
+    likeArticle(id, callback) {
         axios.get(url + '/article/like/' + id, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -94,15 +98,17 @@ class CallAPI {
         })
         .then(function(response) {
             console.log(response);
+            callback(null);
         })
         .catch(function(error) {
             console.log(error);
+            callback(error);
         });
     }
 
 
     // Unlikes article
-    unlikeArticle(id) {
+    unlikeArticle(id, callback) {
         axios.get(url + '/article/unlike/' + id, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -112,9 +118,11 @@ class CallAPI {
         })
         .then(function(response) {
             console.log(response);
+            callback(null);
         })
         .catch(function(error) {
             console.log(error);
+            callback(error);
         });
     }
 

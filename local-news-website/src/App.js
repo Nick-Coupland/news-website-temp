@@ -127,22 +127,42 @@ class App extends Component {
 
   // Calls API to process pinning article (admin only)
   handlePin(id) {
-    new CallAPI().pinArticle(id);
+    new CallAPI().pinArticle(id, (err) => {
+      if(err) {
+        alert("Failed to pin. Please try again");
+        return;
+      }
+    });
   }
 
   // Calls API to process unpinning article (admin only)
   handleUnpin(id) {
-    new CallAPI().unpinArticle(id);
+    new CallAPI().unpinArticle(id, (err) => {
+      if(err) {
+        alert("Failed to unpin. Please try again");
+        return;
+      }
+    });
   }
 
   // Calls API to process positive article rating
   handleLike(id) {
-    new CallAPI().likeArticle(id);
+    new CallAPI().likeArticle(id, (err) => {
+      if(err) {
+        alert("Failed to like. Please try again");
+        return;
+      }
+    });
   }
 
   // Calls API to process negative article rating
   handleUnlike(id) {
-    new CallAPI().unlikeArticle(id);
+    new CallAPI().unlikeArticle(id, (err) => {
+      if(err) {
+        alert("Failed to unlike. Please try again");
+        return;
+      }
+    });
   }
 
   // Pulls through homepage article data on rendering of component
